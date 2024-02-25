@@ -116,24 +116,89 @@ header{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
+.projects ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 .project {
     width: 200px;
     margin: 20px;
     text-align: center;
 }
-
 .project img {
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.info-btn{
-    font-family: 'Naowh';
-    border: 0.1 solid rgba(0, 0, 0, 0);
+.buttonbox {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .buttonbox {
+    font-size: 1em;
+    color: #fff;   
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+ 
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
     border-radius: 5px;
-}
+    width: 30%;
+    position: relative;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #a1a1a1;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
 #LudwigProfilePic{
     width: 250px;
     height: 350px;
